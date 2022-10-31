@@ -33,11 +33,4 @@ abstract class AbstractRunner implements RunnerInterface
     {
         return ArgumentBagInterface::class;
     }
-
-    public function run(): void
-    {
-        if (empty($this->argumentBag)) {
-            throw new RuntimeException('ArgumentBag must be set to run this runner');
-        }
-    }
 }
