@@ -9,12 +9,13 @@ use RuntimeException;
 
 /**
  * @template T of ArgumentBag\ArgumentBagInterface
+ *
  * @implements RunnerInterface<T>
  */
 abstract class AbstractRunner implements RunnerInterface
 {
     /**
-     * @var T $argumentBag
+     * @var T
      */
     protected ArgumentBagInterface $argumentBag;
 
@@ -28,6 +29,7 @@ abstract class AbstractRunner implements RunnerInterface
 
     /**
      * @param T $argumentBag
+     *
      * @return self<T>
      */
     public function setArgumentBag(ArgumentBagInterface $argumentBag): self

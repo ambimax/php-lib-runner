@@ -15,6 +15,7 @@ interface RunnerInterface
 
     /**
      * @param T $argumentBag
+     *
      * @return self<T>
      */
     public function setArgumentBag(ArgumentBagInterface $argumentBag): self;
