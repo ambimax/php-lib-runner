@@ -46,6 +46,7 @@ class AbstractRunnerTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('ArgumentBag for Ambimax\Runner\AbstractRunner needs to be of type: Ambimax\Runner\Test\ArgumentBag\MinimalImplementation\MinimalArgumentBag');
 
+        // @phpstan-ignore-next-line
         $runner->setArgumentBag($argumentBag);
     }
 }

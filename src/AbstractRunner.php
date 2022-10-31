@@ -7,16 +7,30 @@ namespace Ambimax\Runner;
 use Ambimax\Runner\ArgumentBag\ArgumentBagInterface;
 use RuntimeException;
 
+/**
+ * @template T of ArgumentBag\ArgumentBagInterface
+ * @implements RunnerInterface<T>
+ */
 abstract class AbstractRunner implements RunnerInterface
 {
+    /**
+     * @var T $argumentBag
+     */
     protected ArgumentBagInterface $argumentBag;
 
+    /**
+     * @param T $argumentBag
+     */
     public function __construct(ArgumentBagInterface $argumentBag)
     {
         $this->setArgumentBag($argumentBag);
     }
 
-    public function setArgumentBag(ArgumentBagInterface $argumentBag): RunnerInterface
+    /**
+     * @param T $argumentBag
+     * @return self<T>
+     */
+    public function setArgumentBag(ArgumentBagInterface $argumentBag): self
     {
         if (!is_a($argumentBag, $this->getArgumentBagType())) {
             throw new RuntimeException('ArgumentBag for '.self::class.' needs to be of type: '.$this->getArgumentBagType());
@@ -24,14 +38,6 @@ abstract class AbstractRunner implements RunnerInterface
         $this->argumentBag = $argumentBag;
 
         return $this;
-    }
-
-    /**
-     * @return class-string
-     */
-    public function getArgumentBagType(): string
-    {
-        return ArgumentBagInterface::class;
     }
 
     /**

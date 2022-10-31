@@ -7,6 +7,9 @@ namespace Ambimax\Runner\Test\MinimalImplementation;
 use Ambimax\Runner\AbstractRunner;
 use Ambimax\Runner\Test\ArgumentBag\MinimalImplementation\MinimalArgumentBag;
 
+/**
+ * @extends AbstractRunner<MinimalArgumentBag>
+ */
 class MinimalRunner extends AbstractRunner
 {
     public function getArgumentBagType(): string
