@@ -18,6 +18,6 @@ class MultipleArgumentValidationExceptionTest extends TestCase
 
         $multipleException = new MultipleArgumentValidationException($exceptions);
 
-        $this->assertSame("There are exceptions occurred during argument validation:\nError while validation of arg1: msg1\nError while validation of arg2: msg2\nError while validation of arg3: msg3\n", $multipleException->getMessage());
+        $this->assertSame("One or more exceptions occurred during argument validation:\nError while validation of arg1: msg1\nError while validation of arg2: msg2\nError while validation of arg3: msg3\n", $multipleException->getMessage());
     }
 }

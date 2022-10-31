@@ -14,7 +14,7 @@ class MultipleArgumentValidationException extends Exception
      */
     public function __construct(array $exceptions, int $code = 0, Throwable $previous = null)
     {
-        $message = "There are exceptions occurred during argument validation:\n";
+        $message = "One or more exceptions occurred during argument validation:\n";
         foreach ($exceptions as $exception) {
             $message .= $exception->getMessage()."\n";
         }
