@@ -8,6 +8,7 @@
             "email": "fk@ambimax.de"
         }
     ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Ambimax\\Runner\\": "src/"
