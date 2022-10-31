@@ -13,12 +13,8 @@ class AbstractRunnerTest extends TestCase
 {
     public function testSetArgumentBag(): void
     {
-        $runner = $this->getMockBuilder(AbstractRunner::class)
-            ->disableOriginalConstructor()
-            ->getMockForAbstractClass();
-
-        $argumentBag = $this->createMock(ArgumentBagInterface::class);
-        $runner->setArgumentBag($argumentBag);
+        $argumentBag = new MinimalArgumentBag();
+        $runner = new MinimalRunner($argumentBag);
 
         $reflection = new \ReflectionClass(AbstractRunner::class);
         $property = $reflection->getProperty('argumentBag');
