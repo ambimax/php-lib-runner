@@ -34,6 +34,9 @@ abstract class AbstractRunner implements RunnerInterface
         return ArgumentBagInterface::class;
     }
 
+    /**
+     * @return mixed
+     */
     protected function getArgument(string $argument)
     {
         return $this->argumentBag->getArgument($argument);

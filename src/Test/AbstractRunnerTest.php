@@ -48,16 +48,4 @@ class AbstractRunnerTest extends TestCase
 
         $runner->setArgumentBag($argumentBag);
     }
-
-    public function testRunWithoutArgumentBag(): void
-    {
-        $runner = $this->getMockBuilder(AbstractRunner::class)
-                    ->disableOriginalConstructor()
-                    ->getMockForAbstractClass();
-
-        $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('ArgumentBag must be set to run this runner');
-
-        $runner->run();
-    }
 }

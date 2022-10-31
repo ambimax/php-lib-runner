@@ -13,4 +13,8 @@ class MinimalRunner extends AbstractRunner
     {
         return MinimalArgumentBag::class;
     }
+
+    public function run(): void
+    {
+    }
 }
