@@ -1,0 +1,38 @@
+{
+    "name": "ambimax/php-lib-runner",
+    "type": "library",
+    "homepage": "https://ambimax.de",
+    "authors": [
+        {
+            "name": "Fabian Köhnen",
+            "email": "fk@ambimax.de"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ambimax\\Runner\\": "src/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@unit-coverage",
+            "@stan"
+        ],
+        "cs-check": "vendor/bin/php-cs-fixer fix . --dry-run --rules=@Symfony --diff",
+        "cs-fix": "vendor/bin/php-cs-fixer fix . --rules=@Symfony",
+        "unit": "vendor/bin/phpunit",
+        "stan": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "unit-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text"
+    },
+
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.5.2",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan-symfony": "^1.1"
+    }
+}
