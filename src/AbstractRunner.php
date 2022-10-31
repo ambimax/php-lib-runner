@@ -33,4 +33,9 @@ abstract class AbstractRunner implements RunnerInterface
     {
         return ArgumentBagInterface::class;
     }
+
+    protected function getArgument(string $argument)
+    {
+        return $this->argumentBag->getArgument($argument);
+    }
 }
