@@ -1,4 +1,4 @@
-# Runner and ArgumentBag
+# Classes
 ## Runner
 **Interface**: [RunnerInterface](../src/RunnerInterface.php)
 
@@ -18,7 +18,7 @@ An ArgumentBag is a storage for all arguments a runner needs.
 This Arguments should be validated and set in the constructor and only return an ArgumentBag when all arguments are valid.
 You should set all arguments in the constructor by its own variable.
 ### Best Practices
-Every Argument should have a key as Constant set in the class over which this Argument can be addressed in the getArgument method.
+Every Argument should addressed in a Enum or have a key as Constant set in the class over which this Argument can be addressed in the getArgument method.
 
 ## Exceptions
 ### ArgumentValidationException

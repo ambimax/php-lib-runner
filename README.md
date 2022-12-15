@@ -12,6 +12,7 @@ A Runner should combine and invoke the different parts of the code just like a c
 External variables should get bundled and validated in an ArgumentBag.
 
 ### Implementing a ArgumentBag
+[__Detailed Infos__](docs/classes.md#argumentbag)
 ```php
 use \Ambimax\Runner\ArgumentBag\ArgumentEnumInterface;
 use \Ambimax\Runner\ArgumentBag\ArgumentBagInterface;
@@ -65,6 +66,7 @@ class DemoArgumentBag implements ArgumentBagInterface {
 ```
 
 ### Implementing a Runner
+[__Detailed Infos__](docs/classes.md#runner)
 ```php
 use \Ambimax\Runner\AbstractRunner;
 use \Ambimax\Runner\ArgumentBag\ArgumentEnumInterface;
@@ -91,6 +93,9 @@ class DemoRunner extends AbstractRunner {
 $argumentBag = new DemoArgumentBag('example1', 'example2', 'example3');
 (new DemoRunner($argumentBag))->run();
 ```
+
+### Detailed Descriptions
+[See here](docs/classes.md)
 
 ## Helper scripts
 
