@@ -7,7 +7,6 @@ use Ambimax\Runner\ArgumentBag\ArgumentBagInterface;
 use Ambimax\Runner\Test\ArgumentBag\MinimalImplementation\MinimalArgumentBag;
 use Ambimax\Runner\Test\MinimalImplementation\MinimalRunner;
 use PHPUnit\Framework\TestCase;
-use RuntimeException;
 
 class AbstractRunnerTest extends TestCase
 {
@@ -39,7 +38,7 @@ class AbstractRunnerTest extends TestCase
 
         $argumentBag = $this->createMock(ArgumentBagInterface::class);
 
-        $this->expectException(RuntimeException::class);
+        $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('ArgumentBag for Ambimax\Runner\AbstractRunner needs to be of type: Ambimax\Runner\Test\ArgumentBag\MinimalImplementation\MinimalArgumentBag');
 
         // @phpstan-ignore-next-line

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Ambimax\Runner;
 
 use Ambimax\Runner\ArgumentBag\ArgumentBagInterface;
-use RuntimeException;
 
 /**
  * @template T of ArgumentBag\ArgumentBagInterface
@@ -35,7 +34,7 @@ abstract class AbstractRunner implements RunnerInterface
     public function setArgumentBag(ArgumentBagInterface $argumentBag): self
     {
         if (!is_a($argumentBag, $this->getArgumentBagType())) {
-            throw new RuntimeException('ArgumentBag for '.self::class.' needs to be of type: '.$this->getArgumentBagType());
+            throw new \RuntimeException('ArgumentBag for '.self::class.' needs to be of type: '.$this->getArgumentBagType());
         }
         $this->argumentBag = $argumentBag;
 
