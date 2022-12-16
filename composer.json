@@ -26,7 +26,6 @@
         "stan": "vendor/bin/phpstan analyse -c phpstan.neon",
         "unit-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text"
     },
-
     "require": {
         "php": ">=8.0"
     },
@@ -34,5 +33,6 @@
         "phpunit/phpunit": "~9.5.2",
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan-symfony": "^1.1"
-    }
+    },
+    "version": "1.0.0"
 }
