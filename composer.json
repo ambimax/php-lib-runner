@@ -34,5 +34,5 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan-symfony": "^2.0"
     },
-    "version": "1.0.0"
+    "version": "1.0.1"
 }

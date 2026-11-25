@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ambimax/php-lib-runner/compare/1.0.0...1.0.1) (2026-11-25)
+
+
+### Bug Fixes
+
+* update php and phpstan version ([950abce](https://github.com/ambimax/php-lib-runner/commit/950abced61bc9ecc6c40d594ade4088b2a261452))
+
 # 1.0.0 (2022-12-16)
 
 
