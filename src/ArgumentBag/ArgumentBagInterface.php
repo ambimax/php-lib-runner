@@ -6,5 +6,5 @@ namespace Ambimax\Runner\ArgumentBag;
 
 interface ArgumentBagInterface
 {
-    public function getArgument(string $argument);
+    public function getArgument(string $argument): mixed;
 }
