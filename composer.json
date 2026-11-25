@@ -27,12 +27,12 @@
         "unit-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text"
     },
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "~9.5.2",
+        "phpunit/phpunit": "^9.6",
         "friendsofphp/php-cs-fixer": "^3.0",
-        "phpstan/phpstan-symfony": "^1.1"
+        "phpstan/phpstan-symfony": "^2.0"
     },
     "version": "1.0.0"
 }

@@ -8,7 +8,7 @@ use Ambimax\Runner\ArgumentBag\ArgumentBagInterface;
 
 class MinimalArgumentBag implements ArgumentBagInterface
 {
-    public function getArgument(string $argument)
+    public function getArgument(string $argument): mixed
     {
         return $argument;
     }
